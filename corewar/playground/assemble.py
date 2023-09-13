@@ -7,7 +7,7 @@ def main():
     toStoreC.begin.append(0xea)
     toStoreC.begin.append(0x83)
     toStoreC.begin.append(0xf3)
-    f = open(sys.argv[1], 'r')
+    f = open("./players_src/"+sys.argv[1], 'r')
     toStoreC.fileLines = f.readlines()
     f.close()
     toStoreC.CleanLines()
@@ -25,7 +25,7 @@ def main():
 
     line = 0
     lineStorage = []
-    f = open("test.cor", "wb")
+    f = open("./players_src/test.cor", "wb")
     for i in toStoreC.toStore:
         if line == 16:
             print(lineStorage)
